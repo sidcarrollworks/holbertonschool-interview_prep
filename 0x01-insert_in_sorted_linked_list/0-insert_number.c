@@ -36,13 +36,13 @@ listint_t *insert_node(listint_t **head, int number)
 			*head = newNode;
 			return (newNode);
 		}
-		else if (number > tmp->n && !tmp->next)
+		if (number > tmp->n && !tmp->next)
 		{
 			newNode->next = tmp->next;
 			tmp->next = newNode;
 			return (newNode);
 		}
-		else if (tmp->next)
+		if (tmp->next)
 		{
 			if (number > tmp->n && number <= tmp->next->n)
 			{
