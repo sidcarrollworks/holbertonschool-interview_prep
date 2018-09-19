@@ -2,12 +2,10 @@
 #include <stdlib.h>
 
 /**
- * insert_node - inserts a number into
- * a sorted singly linked list
- * @head: double pointer to start of list
- * @number: number to insert to node
- * Return: address of the new node, or NULL
- * if failed
+ * insert_node - insert node into linekd list
+ * @head: start of list
+ * @number: number to insert
+ * Return: new node of null if it failed
  */
 listint_t *insert_node(listint_t **head, int number)
 {
