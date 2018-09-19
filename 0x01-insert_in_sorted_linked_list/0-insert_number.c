@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
 
 /**
  * insert_node - insert node into linekd list
@@ -22,7 +21,7 @@ listint_t *insert_node(listint_t **head, int number)
 	newNode->n = number;
 	newNode->next = *head;
 
-	if (!*head)
+	if (*head == NULL)
 	{
 		*head = newNode;
 		return (newNode);
@@ -36,7 +35,7 @@ listint_t *insert_node(listint_t **head, int number)
 			*head = newNode;
 			return (newNode);
 		}
-		if (number > tmp->n && !tmp->next)
+		if (number > tmp->n && tmp->next == NULL)
 		{
 			newNode->next = tmp->next;
 			tmp->next = newNode;
